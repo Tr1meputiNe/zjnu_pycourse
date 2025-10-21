@@ -46,3 +46,18 @@ print(f"{c:.2f}")
 '''
 
 #Q6
+'''
+a = int(input())
+b = int(input())
+c = int(input())
+s = a + b + c
+avg = s / 3
+
+print("和:",s)
+print("平均:",f"{avg:.4f}")
+'''
+
+#Q7
+'''
+print("轻轻松松通过考试！")
+'''
