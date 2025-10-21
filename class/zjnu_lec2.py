@@ -81,3 +81,29 @@ print(squares)
 #列表初始化
 zeros = ["",0,""] * 5
 print(zeros)
+
+
+#字符串操作
+#e.g. 6
+s = " Hello, ZJNU! "
+print(s)
+#查找与替换
+print(s.find("ZJNU",3)) #查找子串位置,从位置3开始查找,找不到返回-1
+s.index("H") #查找子串位置,找不到报错
+#rfind(),rindex()从右侧查找
+print(s.replace("ZJNU", "World")) #替换子串,不改变原字符串,返回新字符串
+#连接和分割
+words = s.split(",") #以逗号分割字符串,返回列表
+print(words)
+s2 = "-"
+s3 = s2.join(words) #以-连接列表元素,返回新字符串
+print(s3)
+#其他常用方法
+'''
+print(s.strip()) #去除首尾空格
+print(s.upper()) #转换为大写
+print(s.lower()) #转换为小写
+print(s.startswith(" H")) #判断是否以指定子串开头
+print(s.endswith("! ")) #判断是否以指定子串结尾
+print(s.count("o")) #统计子串出现次数
+'''
