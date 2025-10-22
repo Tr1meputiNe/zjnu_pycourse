@@ -18,7 +18,7 @@ int(c)
 print(b + c)
 '''
 
-b, c = map(int, input("input two numbers: ").split())
+b, c = map(int, input("input two numbers: ").split(","))
 print(b + c)
 
 
@@ -94,6 +94,7 @@ s.index("H") #查找子串位置,找不到报错
 print(s.replace("ZJNU", "World")) #替换子串,不改变原字符串,返回新字符串
 #连接和分割
 words = s.split(",") #以逗号分割字符串,返回列表
+type(words)
 print(words)
 s2 = "-"
 s3 = s2.join(words) #以-连接列表元素,返回新字符串

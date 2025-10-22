@@ -61,3 +61,104 @@ print("平均:",f"{avg:.4f}")
 '''
 print("轻轻松松通过考试！")
 '''
+
+#Q8
+'''
+s = input()
+A = s[::2]
+B = s[1::2]
+print(A + B)
+'''
+
+#Q9
+'''
+length, width = map(float, input().split(","))
+c = ((length ** 2) + (width ** 2)) ** 0.5 
+print(f"{c:.3f}")
+'''
+
+#Q10
+'''
+lst = list(input())
+while len(lst) < 3 or len(lst) % 2 == 0:
+    lst = list(input())
+
+first = lst[0]
+mid = len(lst) // 2
+middle = lst[mid]
+last = lst[-1]
+print(f"{first}{middle}{last}")
+
+'''
+
+#Q11
+'''
+a = input()
+b = a.split()
+c = input()
+d = input()
+for i in range(len(b)):
+    if b[i].lower() == c.lower():
+        b[i] = d
+print(" ".join(b))
+'''
+
+#Q12
+'''
+a = input()
+b = a[:6]
+c = a[14:16]
+
+print(f"当天出生于{b}地区的第{c}个人")
+'''
+
+#Q13
+'''
+a = input()
+b = list(a)
+
+while b[0] == "0":
+    b.pop(0)
+
+c = input()
+n = 0
+
+for i in range(len(b)):
+    if b[i].lower() == c.lower():
+        n += 1
+
+print(n)
+
+'''
+
+#Q14
+'''a = input()
+b = a.split()
+m = b[0]
+for i in b:
+    if i > m:
+        m = i
+
+print(m)
+'''
+
+#Q15
+'''a = input()
+b = list(a)
+c = b[3:]
+d = "".join(c)
+
+print(b[0], end="")
+for i in range(len(b)-3):
+    print(b[1],end="")
+print(b[0])
+
+print(b[2],end="")
+print(d, end="")
+print(b[2])
+
+print(b[0],end="")
+for i in range(len(b)-3):
+    print(b[1],end="")
+print(b[0])
+'''
