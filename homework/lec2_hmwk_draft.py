@@ -143,22 +143,22 @@ print(m)
 '''
 
 #Q15
-'''a = input()
-b = list(a)
-c = b[3:]
-d = "".join(c)
+'''
+a = input()
 
-print(b[0], end="")
-for i in range(len(b)-3):
-    print(b[1],end="")
-print(b[0])
+print(a[0], end="")
+for i in range(len(a) - 3):
+    print(a[1], end="")
+print(a[0])
 
-print(b[2],end="")
-print(d, end="")
-print(b[2])
+print(a[2], end="")
+print(a[3:], end="")
+print(a[2])
 
-print(b[0],end="")
-for i in range(len(b)-3):
-    print(b[1],end="")
-print(b[0])
+print(a[0], end="")
+for i in range(len(a) - 3):
+    print(a[1], end="")
+print(a[0])
+
+
 '''
