@@ -61,12 +61,15 @@ print(lst)
 #添加元素
 lst.append(6)
 print(lst)
+lst.extend([7, 8, 9]) #添加多个元素或列表
+print(lst)
 #插入元素
 lst.insert(2, 20) #在第三个位置插入20
 print(lst)
 #删除元素
-lst.pop(2) #删除第三个元素
+lst.pop(2) #删除第三个元素，返回被删除的元素
 print(lst)
+lst.remove(20) #删除第一个20
 #切片
 print(lst[1:4]) #第二个到第四个元素
 print(lst[:3]) #前三个元素 
@@ -100,11 +103,9 @@ s2 = "-"
 s3 = s2.join(words) #以-连接列表元素,返回新字符串
 print(s3)
 #其他常用方法
-'''
 print(s.strip()) #去除首尾空格
 print(s.upper()) #转换为大写
 print(s.lower()) #转换为小写
 print(s.startswith(" H")) #判断是否以指定子串开头
 print(s.endswith("! ")) #判断是否以指定子串结尾
 print(s.count("o")) #统计子串出现次数
-'''

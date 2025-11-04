@@ -22,7 +22,10 @@ for i in a:
         n += 1
 print(f"{b} {n}")
 ''' 
-
+'''
+s = input()
+m1 = max(s)
+print(m1, s.find(m1))'''
 #Q4
 '''
 if (a[1] + m) >= 60:
@@ -41,16 +44,19 @@ elif (a[1] + m) < 0:
 
 '''
 #corrected version
-'''a = list(map(int, input().split(":")))
+'''
+a = list(map(int, input().split(":")))
 b = int(input())
 t = a[0] * 60 + a[1] + b
 a[0] = t // 60
 a[1] = t % 60
 
-print(f"{a[0]:02d}:{a[1]:02d}")'''
+print(f"{a[0]:02d}:{a[1]:02d}")
+'''
 
 #Q5
-'''n = int(input())
+'''
+n = int(input())
 a = list(map(int, input().split()))
 m = a[0]
 p = 0
@@ -59,6 +65,13 @@ for i in range(1, n):
         m = a[i]
         p = i
 print(m, p)
+'''
+'''
+index()函数
+n = int(input())
+a = list(map(int, input().split()))
+i = a.index(max(a))
+print(a[i], i)
 '''
 
 #Q6
@@ -75,14 +88,15 @@ print(sum(a)//len(a), max(a), min(a))
 
 #Q8
 '''
-a = eval(input())
-print(f"length={len(a)}")
-print(f"sum={sum(a)}")
-'''
-'''
-s = input().strip()
-s = s.strip("[]")
+s = input().strip("[]")
 a = list(map(int, s.split(",")))
 print(f"length={len(a)}")
 print(f"sum={sum(a)}")
 '''
+
+'''
+a = eval(input())
+print(f"length={len(a)}")
+print(f"sum={sum(a)}")
+'''
+
