@@ -84,6 +84,7 @@ print(squares)
 #列表初始化
 zeros = ["",0,""] * 5
 print(zeros)
+#index()函数
 
 
 #字符串操作
