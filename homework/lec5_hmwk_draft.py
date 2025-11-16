@@ -186,3 +186,110 @@ for i in b:
 
 print(s)
 '''
+
+#Q11
+'''
+n = int(input())
+s = 0
+
+while n > 0:
+    n = n - (n // 2 + 2)
+    s += 1
+
+print(s)
+'''
+
+#Q12
+'''
+a, b = map(int, input().split(","))
+
+for i in range(a, b+1):
+    if i == 2:
+        print(i, end=" ")
+        continue
+
+    if i > 2 and i % 2 != 0:
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            print(i, end=" ")
+'''
+
+#Q13_un
+'''
+s = 0
+while s < 3:
+    if input() == "zust":
+        print("Success")
+        break
+    else:
+        print("Password error")
+        s += 1
+else:
+    print("Login failed")
+
+'''
+
+#Q14
+'''
+a = input()
+b = input()
+
+c = ""
+d = 0
+
+for i in a:
+    if i != b:
+        c = c + i
+        d += 1
+print(c)
+print(d)
+'''
+
+#Q15
+'''
+error = float(input())  
+s = t = 1.0             
+n = 1                   
+
+while True:
+    t = t / n
+    if t < error:
+        s += t
+        break  
+    s += t
+    n += 1
+
+print(f"{s:.6f}")
+'''
+
+#Q16
+'''
+error = float(input())
+
+N = int(1 / (error ** 0.5)) + 1  
+
+s = 0.0
+for n in range(1, N):
+    s += 1 / (n * n)
+
+s = (6 * s) ** 0.5
+print(f"{s:.6f}")
+'''
+
+#Q17
+'''
+n = float(input())
+error = float(input())
+prev = 1.0
+t = 0.0
+
+while True:
+    t = 0.5 * (prev + n / prev)
+    if (prev - t) ** 2 <= error**2:
+        break
+    prev = t
+
+print(t)
+'''
