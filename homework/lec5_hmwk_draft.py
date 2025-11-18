@@ -31,6 +31,14 @@ while n >= 10:
 
 print(n)
 '''
+#Q2_other
+'''
+n = int(input())
+
+while n >= 10:
+    n = sum(map(int, str(n)))
+print(n)
+'''
 
 #Q3
 '''
@@ -73,31 +81,36 @@ else:
 #Q5
 '''
 a, b = map(int, input().split())
-
 c = 1
+
 if a < b:
     d = a
 else:
     d = b
-    
 for i in range(1, d + 1):
     if a % i == 0:
         if b % i == 0:
             c = i
 
-
 if a > b:
     e = a
 else:
     e = b
-
 while True:
     if e % a == 0:
         if e % b == 0:
             break
-    e = e + 1
+    e += 1
 
 print(c, e)
+'''
+#Q5_other 辗转相除法
+'''
+n, m = map(int, input().split())
+a, b = n, m
+while n%m != 0:
+    n, m = m, n%m
+print(m, a*b // m)
 '''
 
 #Q6
@@ -115,19 +128,18 @@ print(d)
 #Q7
 '''
 a = int(input())
+b = 1         
 
-b = 1               
 for i in range(1, a + 1):
     b = b * i
 
 c = []           
 d = []              
-
 x = b
-y = 2               
+y = 2   
+
 while y <= x:
-    if x % y == 0:
-        yon = 0      
+    if x % y == 0:     
         p = 0
         while x % y == 0:
             x = x // y
@@ -141,7 +153,8 @@ e = 1
 for i in d:
     e = e * (i + 1)
 print(e)
-'''
+
+''' 
 
 #Q8
 '''
@@ -172,6 +185,7 @@ s = str(b)[1:-1]
 s = s.replace(" ", "")
 print(s)
 '''
+#print(*b)
 
 #Q10
 '''
@@ -215,8 +229,18 @@ for i in range(a, b+1):
         else:
             print(i, end=" ")
 '''
+#Q12_other
+'''
+a, b = map(int, input().split(","))
+for n in range(a, b+1):
+    for i in range(a, b+1):
+        if n % i == 0:
+            break
+        else:
+            print(n, end=" ")
+    '''
 
-#Q13_un
+#Q13
 '''
 s = 0
 while s < 3:
@@ -228,7 +252,6 @@ while s < 3:
         s += 1
 else:
     print("Login failed")
-
 '''
 
 #Q14
@@ -245,6 +268,9 @@ for i in a:
         d += 1
 print(c)
 print(d)
+'''
+'''
+replace()
 '''
 
 #Q15
