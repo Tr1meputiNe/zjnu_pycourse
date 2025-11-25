@@ -57,6 +57,17 @@ for i in range(1, n+1):
     s.append(a)
 print(*s)
 '''
+'''
+r = [0]
+c = int(input())
+for n in range(1, c + 1):
+    t = r[n-1] - n
+    if t > 0 and t not in r:
+        r.append(t)
+    else:
+        r.append(r[n-1] + n)
+print(*r)
+'''
 
 #Q5
 '''
@@ -139,8 +150,9 @@ print(s)
 overtime'''
 
 '''
+#获取输入
 m, n = map(int, input().split())
-
+#埃氏筛 创建bool列表进行判断
 is_prime = [True] * (n+1)
 is_prime[0] = is_prime[1] = False
 for i in range(2, int(n**0.5)+1):
@@ -173,8 +185,26 @@ for num in range(m, n+1):
 
 print(s)
 first test answer error?'''
-
-
+'''
+创建列表
+筛选法
+找到第一个质数,剩下倍数全部筛掉
+'''
+'''
+maxnum = 10**6
+primes = [True] * (maxnum + 1)
+primes[0] = primes[1] = False
+for i in range(2, int(maxnum ** 0.5) + 1):
+    if primes[i]:
+        primes[i*i:maxnum+1:i] = [False] * len(primes[i*i:maxnum+1:i])
+s = 0
+for num in range(m , n+1):
+    if primes[num]:
+        rev = int(str(num)[::-1])
+        if primes[rev]:
+            s += num
+print(s)
+'''
 #Q7
 '''
 t = int(input())
@@ -216,6 +246,11 @@ for i in range(t):
     else:
         print("NO")
 '''
+'''
+math.isqrt()函数
+取求得平方根的整数部分
+'''
+
 
 #Q8
 '''
@@ -236,7 +271,7 @@ for k in range(2, n):
             i += 1
 
 print(b)
-'''
+双指针'''
 
 #Q9
 '''
@@ -355,6 +390,35 @@ while i <= n:
 '''
 
 #Q13
+m, n = map(int, input().split())
+c = 0
+for x in range(m, n+1):
+    d =[]
+    for i in range(1, x):
+        if x % i == 0:
+            d.append(i)
 
 #Q14
+#test 求素数逆序数的和
+m, n = map(int, input().split())
+#埃氏筛 创建bool列表进行判断
+is_prime = [True] * (n+1)
+is_prime[0] = is_prime[1] = False
+#到根号n即可
+for i in range(2, int(n**0.5)+1):
+    if is_prime[i]:
+        for j in range(i*i, n+1, i):
+            is_prime[j] = False
+#ai 干的 转换成集合储存会快一点
+primes = [i for i in range(m, n+1) if is_prime[i]]
+prime_set = set(primes)
 
+s = 0
+for num in primes:
+    #求逆序
+    rev = int(str(num)[::-1])
+    if rev in prime_set:
+        #加到总和中
+        s += num
+
+print(s)
