@@ -18,7 +18,7 @@ for i in range(n, 0, -1):
     for j in range(i)
         print(chr(s), end = " ")
         s += 1
-    print()
+    print(';')
 '''
 #Q2
 '''
@@ -83,11 +83,10 @@ for i in range(n):
     x = i + 1
     for j in range(n - i):
         print(x, end="")
-        
+
         if j != (n - i - 1):
             if x < 10:
-                for _ in range(2):
-                    print(" ", end="")
+                print("  ", end="")
             else:
                 print(" ", end="")
                 
@@ -95,7 +94,33 @@ for i in range(n):
     print()
 correct'''
 
+'''
+n = int(input())
+matrix = [[0]*n for _ in range(n)]
+c = 1
+for j in range(n):
+    for i in range (n - j):
+        matrix[i][j] = c
+        c += 1
+for i in range(n):
+    for j in range(n - i - 1):
+        print(f"{matrix[i][j]:<3d}", end="")
+    print(matrix[i][n-i-1])
+'''
+
 #Q5
+'''
+n = int(input())
+a, b = 1, 2
+for i in range(3, n + 1):
+    c = a + b
+    a = b
+    b = c
+print(b if n > 1 else 1)
+'''
+
+#Q6
+'''
 n = int(input())
 for i in range(n):
     for k in range(n - i):
@@ -111,4 +136,8 @@ for i in range(n):
                 print(nxy - (l+1), end="  " if l < n-1 else "" )
     print()
     print(nxy + 1, end="  ")
+'''
+
+#Q7
+
 
