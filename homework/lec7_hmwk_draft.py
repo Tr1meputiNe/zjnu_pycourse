@@ -15,7 +15,7 @@ for i in range(n, 0, -1):
 n = int(input())
 s = ord("A")
 for i in range(n, 0, -1):
-    for j in range(i)
+    for j in range(i):
         print(chr(s), end = " ")
         s += 1
     print(';')
@@ -139,5 +139,6 @@ for i in range(n):
 '''
 
 #Q7
+
 
 
