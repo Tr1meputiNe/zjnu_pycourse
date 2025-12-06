@@ -5,7 +5,6 @@
 ### [Server](http://210.16.170.161/index.htm) 
 ## To Do List
 - [电路分析课](https://billi.com/video/BV1r4411d7sZ?p=1)
-- lec8_hmwk_draft.py
 - 实验报告
 - 作业
 ## If you want to do some contribution
